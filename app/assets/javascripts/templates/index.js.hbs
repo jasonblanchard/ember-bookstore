@@ -1,4 +1,11 @@
-This is stuff in ember:
+<h2>Available Books</h2>
 {{#each}}
-  {{this}}
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      {{this.title}}
+    </div>
+    <div class="panel-body">
+      {{this.description}}
+    </div>
+  </div>
 {{/each}}
