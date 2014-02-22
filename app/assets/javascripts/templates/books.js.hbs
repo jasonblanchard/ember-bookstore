@@ -1,6 +1,6 @@
-These are all the books:
-<ul>
+<h2>All the books</h2>
+<div class="list-group">
   {{#each}}
-   <li>{{title}}</li>
+   {{#link-to 'book' this class='list-group-item'}}{{title}}{{/link-to}}
   {{/each}}
-</ul>
+</div>

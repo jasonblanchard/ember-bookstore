@@ -9,8 +9,3 @@
 //= require ./router
 //= require_tree ./routes
 //= require_self
-
-EmberBookstore.Store = DS.Store.extend({
-  adapter: DS.RESTAdapter
-});
-
