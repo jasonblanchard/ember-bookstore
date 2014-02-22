@@ -2,5 +2,5 @@
 
 EmberBookstore.Router.map(function() {
   this.route('index', {path: '/'})
-  // this.resource('posts');
+  this.resource('books', {path: 'books'});
 });
