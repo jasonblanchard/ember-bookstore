@@ -1,9 +1,15 @@
-<h2>All the books</h2>
-<div class="list-group">
-  {{#each}}
-   {{#link-to 'book' this class='list-group-item'}}
-     {{title}}
-     {{#if featured}} <span class='glyphicon glyphicon-star'></span>{{/if}}
-   {{/link-to}}
-  {{/each}}
+<div class='col-md-3'>
+  <h2>All the books</h2>
+  <div class="list-group">
+    {{#each}}
+     {{#link-to 'book' this class='list-group-item'}}
+       {{title}}
+       {{#if featured}} <span class='glyphicon glyphicon-star'></span>{{/if}}
+     {{/link-to}}
+    {{/each}}
+  </div>
+</div>
+
+<div class='col-md-9'>
+  {{outlet}}
 </div>
