@@ -1,12 +1,5 @@
 <h2>Featured Books</h2>
 {{#each featuredBooks}}
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      {{this.title}}
-    </div>
-    <div class="panel-body">
-      {{this.description}}
-    </div>
-  </div>
+  {{partial 'book_preview'}}
 {{/each}}
 {{#link-to 'books' tagName='button' class='btn btn-default'}}More books{{/link-to}}

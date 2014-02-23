@@ -1,12 +1,3 @@
 {{#each}}
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      {{#link-to 'book' this}}
-        <strong>{{this.title}}</strong> {{#if featured}}<span class="glyphicon glyphicon-star"></span>{{/if}}
-      {{/link-to}}
-    </div>
-    <div class="panel-body">
-      {{this.description}}
-    </div>
-  </div>
+  {{partial 'book_preview'}}
 {{/each}}
