@@ -2,3 +2,10 @@
 <p>
   {{description}}
 </p>
+
+<h3>Reviews</h3>
+{{#each reviews}}
+  {{body}}
+{{else}}
+  No reviews yet.
+{{/each}}
