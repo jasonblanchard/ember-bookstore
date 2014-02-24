@@ -1,4 +1,6 @@
 EmberBookstore::Application.routes.draw do
+  resources :reviews
+
   resources :books
 
   root 'index#index'
