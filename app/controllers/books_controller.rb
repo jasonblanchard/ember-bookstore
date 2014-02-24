@@ -5,6 +5,8 @@ class BooksController < ApplicationController
   # GET /books.json
   def index
     @books = Book.includes(:reviews).all
+    # TODO: Find a better query for this
+    @reviews = Review.joins(:book).to_a
   end
 
   # GET /books/1

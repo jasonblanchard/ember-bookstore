@@ -3,5 +3,5 @@ EmberBookstore.Book = DS.Model.extend({
   description: DS.attr('string'),
   featured: DS.attr('boolean'),
   createdAt: DS.attr('date'),
-  reviews: DS.hasMany('EmberBookstore.Review', {async: true})
+  reviews: DS.hasMany('review', {async: true})
 })

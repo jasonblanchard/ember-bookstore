@@ -2,5 +2,5 @@
 
 EmberBookstore.Review = DS.Model.extend({
   body: DS.attr('string'),
-  book: DS.belongsTo('EmberBookstore.Review')
+  book: DS.belongsTo('book')
 });
