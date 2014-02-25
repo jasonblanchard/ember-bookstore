@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery
+//= require markdown.min
 //= require handlebars
 //= require ember
 //= require ember-data

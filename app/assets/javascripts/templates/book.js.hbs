@@ -11,7 +11,7 @@
 {{/each}}
 {{#if isNotReviewed}}
   <h4>New Review</h4>
-  <p class='text-muted'><strong>Preview: </strong>{{review.body}}</p>
+  <p class='text-muted'><strong>Preview: </strong>{{markdown review.body}}</p>
   {{textarea class='form-control' valueBinding='review.body'}}
   <br />
   <button class="btn btn-primary" {{action 'createReview'}}>Save Review</button>
