@@ -9,8 +9,12 @@
 {{else}}
   No reviews yet.
 {{/each}}
-<h4>New Review</h4>
-<p class='text-muted'><strong>Preview: </strong>{{body}}</p>
-{{textarea class='form-control' valueBinding='body'}}
-<br />
-<button class="btn btn-primary" {{action 'createReview'}}>Save Review</button>
+{{#if isNotReviewed}}
+  <h4>New Review</h4>
+  <p class='text-muted'><strong>Preview: </strong>{{review.body}}</p>
+  {{textarea class='form-control' valueBinding='review.body'}}
+  <br />
+  <button class="btn btn-primary" {{action 'createReview'}}>Save Review</button>
+{{else}}
+  <strong>Thanks!</strong>
+{{/if}}

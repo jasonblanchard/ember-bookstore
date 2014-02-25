@@ -1,20 +1,20 @@
 EmberBookstore.BookController = Ember.ObjectController.extend({
-  text: '',
+
+  review: function() {
+    return this.store.createRecord('review', {
+      book: this.get('model')
+    });
+  }.property('model'),
 
   actions: {
     createReview: function() {
-       var review = this.store.createRecord('review', {
-         body: this.get('body'),
-         book: this.get('model')
-       });
-
        var controller = this;
-
-       review.save().then(function(review) {
-         controller.set('text', '');
+       this.get('review').save().then(function(review) {
          controller.get('model.reviews').addObject(review);
        });
     }
-  }
+  },
+
+  isNotReviewed: Ember.computed.alias('review.isNew')
 
 });
