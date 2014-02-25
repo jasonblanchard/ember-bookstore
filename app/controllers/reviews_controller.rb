@@ -24,7 +24,8 @@ class ReviewsController < ApplicationController
   # POST /reviews
   # POST /reviews.json
   def create
-    @review = Review.new(review_params)
+    @book = Book.find(params[:review][:book])
+    @review = @book.reviews.new(review_params.except('book'))
 
     respond_to do |format|
       if @review.save
@@ -69,6 +70,6 @@ class ReviewsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def review_params
-      params.require(:review).permit(:body, :book_id)
+      params.require(:review).permit(:body, :book_id, :book)
     end
 end
