@@ -9,3 +9,11 @@
 {{else}}
   No reviews yet.
 {{/each}}
+<h4>New Review</h4>
+{{#if errorText}}
+  <p class="bg-danger">{{errorText}}</p>
+{{/if}}
+<p class='text-muted'><strong>Preview: </strong>{{body}}</p>
+{{textarea class='form-control' valueBinding='body'}}
+<br />
+<button class="btn btn-primary" {{action 'createReview'}}>Save Review</button>
