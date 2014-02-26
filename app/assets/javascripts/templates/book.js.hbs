@@ -2,9 +2,6 @@
 <p>
   {{description}}
 </p>
-
-{{render 'reviews' reviews}}
-
 {{#if isNotReviewed}}
   <h4>New Review</h4>
   {{textarea class='form-control' valueBinding='review.body'}}
@@ -14,3 +11,6 @@
 {{else}}
   <strong>Thanks!</strong>
 {{/if}}
+
+{{render 'reviews' reviews}}
+
