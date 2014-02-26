@@ -8,7 +8,7 @@ end
 
 json.set! :reviews do
   json.array!(@reviews) do |review|
-    json.extract! review, :id, :body
+    json.extract! review, :id, :body, :created_at
     json.book review.book.id
   end
 end

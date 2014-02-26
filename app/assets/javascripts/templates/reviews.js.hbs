@@ -1,6 +1,11 @@
 <h3>{{reviewCount}} Reviews</h3>
 {{#each}}
- {{markdown body}}
+  <div class='well well-sm'>
+   <p class='text-muted'>
+      On {{created_at}}
+    </p>
+   {{markdown body}}
+ </div>
 {{else}}
   No reviews yet.
 {{/each}}

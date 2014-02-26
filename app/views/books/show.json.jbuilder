@@ -4,6 +4,6 @@ json.set! :book do
 end
 
 json.reviews @book.reviews do |json, review|
-  json.extract! review, :body, :id
+  json.extract! review, :body, :id, :created_at
   json.book review.book.id
 end

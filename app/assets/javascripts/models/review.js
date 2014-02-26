@@ -2,5 +2,6 @@
 
 EmberBookstore.Review = DS.Model.extend({
   body: DS.attr('string'),
-  book: DS.belongsTo('book')
+  book: DS.belongsTo('book'),
+  created_at: DS.attr('date')
 });
