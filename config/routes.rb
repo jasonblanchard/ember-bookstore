@@ -1,8 +1,8 @@
 EmberBookstore::Application.routes.draw do
-  resources :reviews
 
   scope '/api/v1' do
     resources :books
+    resources :reviews
   end
 
   root 'index#index'
