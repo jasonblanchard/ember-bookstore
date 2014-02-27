@@ -5,3 +5,7 @@ EmberBookstore.Store = DS.Store.extend({
   // is built to work nicely with the ActiveModel::Serializers gem.
   adapter: DS.RESTAdapter,
 });
+
+DS.RESTAdapter.reopen({
+  namespace: 'api/v1'
+});
