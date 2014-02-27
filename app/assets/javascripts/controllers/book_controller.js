@@ -3,7 +3,6 @@ EmberBookstore.BookController = Ember.ObjectController.extend({
   review: function() {
     return this.store.createRecord('review', {
       book: this.get('model'),
-      body: ''
     });
   }.property('model'),
 
