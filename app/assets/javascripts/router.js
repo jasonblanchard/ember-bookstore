@@ -1,7 +1,8 @@
 // For more information see: http://emberjs.com/guides/routing/
 
 EmberBookstore.Router.reopen({
-  location: 'history'
+  // TODO: Namespace the api so we can use this 
+  //location: 'history'
 
 });
 
