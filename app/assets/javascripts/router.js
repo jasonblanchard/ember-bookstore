@@ -1,5 +1,10 @@
 // For more information see: http://emberjs.com/guides/routing/
 
+EmberBookstore.Router.reopen({
+  location: 'history'
+
+});
+
 EmberBookstore.Router.map(function() {
   this.route('index', {path: '/'});
   this.resource('books', function() {
