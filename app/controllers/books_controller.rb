@@ -4,9 +4,10 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
-    @books = Book.includes(:reviews).all
+    @books = Book.includes(:reviews).includes(:authors)
     # TODO: Find a better query for this
-    @reviews = Review.joins(:book).to_a
+    @reviews = Review.includes(:book).joins(:book).to_a
+    @authors = Author.includes(:books).joins(:books).to_a
   end
 
   # GET /books/1
