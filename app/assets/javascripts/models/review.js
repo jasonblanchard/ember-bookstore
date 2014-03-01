@@ -3,6 +3,5 @@
 EmberBookstore.Review = DS.Model.extend({
   body: DS.attr('string', {defaultValue: ''}),
   book: DS.belongsTo('book'),
-  // TODO: Make this camel case
-  created_at: DS.attr('date')
+  createdAt: DS.attr('date')
 });
