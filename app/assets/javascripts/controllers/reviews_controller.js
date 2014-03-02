@@ -1,6 +1,6 @@
 EmberBookstore.ReviewsController = Ember.ArrayController.extend({
   
-  sortProperties: ['created_at'],
+  sortProperties: ['createdAt'],
   sortAscending: false,
 
   reviewCount: function() {
