@@ -4,8 +4,7 @@ class ReviewsController < ApplicationController
   # GET /reviews
   # GET /reviews.json
   def index
-    @book = Book.find(params[:book_id])
-    @reviews = @book.reviews.all
+    @reviews = Review.all
   end
 
   # GET /reviews/1
@@ -66,8 +65,7 @@ class ReviewsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_review
-      @book = Book.find(params[:book_id])
-      @review = @book.reviews.find(params[:id])
+      @review = Review.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
