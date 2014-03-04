@@ -1,5 +1,19 @@
 EmberBookstore.BookController = Ember.ObjectController.extend({
 
+  bookAuthors: function() {
+    if ( this.get('authors.length') > 0 ) {
+      return this.get('authors');
+    } else {
+      nullAuthor = this.store.createRecord('author', {
+        firstName: 'Anonymous',
+        lastName: '',
+        book: this.get('model')
+      });
+
+      return [nullAuthor];
+    }
+  }.property('book.@each.authors'),
+
   review: function() {
     return this.store.createRecord('review', {
       book: this.get('model'),
@@ -17,17 +31,10 @@ EmberBookstore.BookController = Ember.ObjectController.extend({
 
   isNotReviewed: Ember.computed.alias('review.isNew'),
 
-  authorLine: function() {
-    if (this.get('authors.length') > 1) {
-      var authors = this.get('authors').map(function(item) {
-        return item.get('fullName');
-      });
-      return authors.join(', ');
-    } else if (this.get('authors.length') == 1) {
-      return this.get('authors').content[0].get('fullName');
-    } else {
-      return 'anonymous';
-    }
-  }.property('book.@each.authors')
+  authorNames: function() {
+    return this.get('bookAuthors').map(function(item) {
+      return item.get('fullName');
+    });
+  }.property('bookAuthors')
 
 });
