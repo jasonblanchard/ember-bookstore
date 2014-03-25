@@ -1,7 +1,7 @@
 // For more information see: http://emberjs.com/guides/routing/
 
 EmberBookstore.Router.reopen({
-  //location: 'history'
+  location: 'history'
 });
 
 EmberBookstore.Router.map(function() {
